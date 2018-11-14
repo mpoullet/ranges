@@ -10,6 +10,6 @@ endif()
 
 add_library(range-v3 INTERFACE)
 target_include_directories(range-v3 INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/range-v3/include)
-target_compile_features(range-v3 INTERFACE cxx_std_14)
+target_compile_features(range-v3 INTERFACE cxx_std_17)
 
 add_subdirectory(src)
