@@ -3,7 +3,9 @@ cmake_minimum_required(VERSION 3.11)
 project(ranges)
 
 if (MSVC)
-    add_compile_options(/W4 /WX /permissive-)
+    # TODO: switch to /W4 when range-v3 is so far
+	# See: https://twitter.com/CoderCasey/status/1062725639424208896
+    add_compile_options(/W3 /WX /permissive-)
 else()
     add_compile_options(-Wall -Wextra -Werror -Wpedantic -pedantic-errors)
 endif()
