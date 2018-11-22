@@ -12,11 +12,11 @@ int main() {
   {
     // With STL
     std::vector<int> evenNumbers;
-    std::copy_if(std::begin(numbers), std::end(numbers),
+    std::copy_if(std::cbegin(numbers), std::cend(numbers),
                  std::back_inserter(evenNumbers), [](int n) { return n % 2; });
 
     std::vector<int> results;
-    std::transform(std::begin(evenNumbers), std::end(evenNumbers),
+    std::transform(std::cbegin(evenNumbers), std::cend(evenNumbers),
                    std::back_inserter(results), [](int n) { return n * 2; });
 
     for (const auto& n : results) {
